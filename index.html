@@ -1,1 +1,104 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Baby Name Guessing Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+    <link rel="icon" href="assets/images/bossbabylookdownleft.png">
+</head>
+
+    <body>
+      
+        <div class="heading">
+            <h1>Guess This Famous Baby!</h1>
+        </div>
+
+        <div class="background">
+            <div class="container">
+
+                <h2>Press Any Key To Start Guessing</h2>
+            
+                <div>
+                    <img id="image" src="./assets/images/bossbabypointleft.jpeg" width="40%" height="auto">
+                    
+                </div>
+
+                <div>
+                    <h3 id="currentword">_ _ _ _ _</h3>
+                </div>
+                <div id="scoreboard">
+                    <div class="sidebar">
+                        <h3>Wins:
+                            <span id="winstracker"></span>
+                        </h3>
+                    </div>
+                
+                    <div class="sidebar">
+                        <h3>Losses:
+                            <span id="losstracker"></span>
+                        </h3>
+                    </div>
+                
+                    <div class="sidebar">
+                        <h3>Remaining Guesses:
+                            <span id="guessesremaining"></span>
+                        </h3>
+                    </div>
+                   
+                    <div class="sidebar">
+                        <h3>Letters Guessed This Turn:
+                            <span id="playerguesses"></span>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--AUDIO FILES-->
+        <div>
+            <!--maggie-->
+            <audio id="maggie">
+                <source src="./assets/audio/maggiepacifier.mp3" type="audio/mp3">
+            </audio>
+            <!--stewie-->
+            <audio id="coolWhip">
+                <source src="./assets/audio/coolWhip.mp3" type="audio/mp3">
+            </audio>
+            <!--honey boo boo-->
+            <audio id="honeybooboo">
+                <source src="./assets/audio/honeyBooBoo.mp3" type="audio/mp3">
+            </audio>
+            <!--tommy -->
+            <audio id="rugrats">
+                <source src="./assets/audio/rugratsTommy.mp3" type="audio/mp3">
+            </audio>
+            <!--jack jack-->
+            <audio id="jackjack">
+                <source src="./assets/audio/babyLaugh.mp3" type="audio/mp3">
+                </audio>
+            <!--boss baby-->
+            
+            <!--wrong guess-->
+            <audio id="uhOhBaby">
+                <source src="./assets/audio/uhOhBaby.mp3" type="audio/mp3">
+            </audio>
+            <audio id="babycry">
+                <source src="./assets/audio/babyCrying.mp3" type="audio/mp3">
+            </audio>
+        </div>
+
+
+
+
+        <script src="assets/javascript/game.js"></script>
+
+    </body>
+
+</html>

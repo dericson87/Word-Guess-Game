@@ -1,0 +1,63 @@
+body {
+    background-image: url("../images/backgroundBottle.jpg");
+    width: 100%
+}
+
+h1 {
+    font-size: 50px;
+    border: solid 3px;
+    background: white;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 10%;
+    margin-right:10%;
+    padding: 15px;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+.sidebar {
+
+    padding: 5px;
+    position: relative;
+    margin-bottom: 5px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 30px;
+}
+
+span {
+
+    padding-left: 3px;
+    padding-right:3px;
+ 
+    font-size: 50px;
+}
+
+.container {
+    background-color: white;
+    margin-top: 5px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 5px;
+    text-align: center;
+    border: solid 3px;
+}
+img {
+    margin: 10px;
+}
+
+#currentword {
+    font-size: 50px;
+    font-family: 'IBM Plex Mono', monospace;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#scoreboard {
+    padding: 20px;
+}
