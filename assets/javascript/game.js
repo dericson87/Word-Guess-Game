@@ -1,6 +1,6 @@
 
 
-var words = ["maggie", "tommy", "jackjack", "stewie", "honeybooboo", "theodorelindseytempleton"]
+var words = ["MAGGIE", "TOMMY", "JACKJACK", "STEWIE", "HONEYBOOBOO", "THEODORELINDSEYTEMPLETON"]
 
 
 var randomWord = "";
@@ -24,6 +24,7 @@ function Game() {
 
     for (var i = 0; i < blanks; i++) {
         blanksAndCorrect.push("_");
+    
     }
 
     document.getElementById("currentword").innerHTML = "  " + blanksAndCorrect.join("  ");
@@ -39,6 +40,7 @@ var rugrats = document.getElementById("rugrats");
 var coolWhip = document.getElementById("coolWhip");
 var jackjack = document.getElementById("jackjack");
 var honeybooboo = document.getElementById("honeybooboo");
+var bossbaby = document.getElementById("bossbaby");
 
 
 function aud() {
@@ -49,6 +51,7 @@ function aud() {
         honeybooboo.pause();
         jackjack.pause();
         rugrats.pause();
+        bossbaby.pause();
         maggie.play();
         document.getElementById("image").src = "./assets/images/maggieusuck.png";
     }
@@ -59,6 +62,7 @@ function aud() {
         honeybooboo.pause();
         jackjack.pause();
         maggie.pause();
+        bossbaby.pause();
         rugrats.play();
         document.getElementById("image").src = "./assets/images/tommypickles.jpg";
     }
@@ -68,6 +72,7 @@ function aud() {
         honeybooboo.pause();
         rugrats.pause();
         maggie.pause();
+        bossbaby.pause();
         jackjack.play();
         document.getElementById("image").src = "./assets/images/jackjacklaughing.gif";
     }
@@ -78,6 +83,7 @@ function aud() {
         jackjack.pause();
         rugrats.pause();
         maggie.pause();
+        bossbaby.pause();
         coolWhip.play();
         document.getElementById("image").src = "./assets/images/stewie.jpg";
     }
@@ -89,7 +95,7 @@ function aud() {
         maggie.pause();
         coolWhip.pause();
         honeybooboo.play();
-        document.getElementById("image").src = "./assets/images/mamaJuneDance.gif";
+        document.getElementById("image").src = "./assets/images/honeybooboo.jpg";
     }
     
     //Boss Baby 
@@ -99,6 +105,7 @@ function aud() {
         maggie.pause();
         coolWhip.pause();
         jackjack.pause();
+        bossbaby.play();
         document.getElementById("image").src = "./assets/images/cookies.gif";
     } 
 };
@@ -107,9 +114,12 @@ function reset() {
     guessesRemaining = 9;
     wrongGuess = [];
     blanksAndCorrect = [];
+   
     Game()
 }
 
+
+ 
 function checkLetters(letter) {
     var letterInWord = false;
  
@@ -136,6 +146,11 @@ function checkLetters(letter) {
     console.log(blanksAndCorrect);
 }
 
+function isValidGuess(guess) {
+    return /^[A-Za-z]$/.test(guess)
+}
+
+
 function complete() {
     console.log("wins:" + wins + "| losses:" + losses + "| guesses left:" + guessesRemaining)
 
@@ -161,16 +176,22 @@ function complete() {
 }
 
 
+
+
 Game()
 
-document.onkeyup = function (event) {
-    var guesses = String.fromCharCode(event.keyCode).toLowerCase();
+document.onkeydown = function (event) {
+    var guesses = event.key.toUpperCase();
 
-    checkLetters(guesses);
+    if (isValidGuess(event.key)) {
+        checkLetters(guesses);
+    }
    
+
     complete();
- 
+    
     console.log(guesses);
 
     document.getElementById("playerguesses").innerHTML = "  " + wrongGuess.join(" ");
 }
+

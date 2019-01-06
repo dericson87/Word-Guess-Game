@@ -61,3 +61,28 @@ img {
 #scoreboard {
     padding: 20px;
 }
+
+@media only screen and (max-width: 640px) {
+  
+     
+     h1 {
+         font-size:30px;
+       
+         margin-right:5px;
+         margin-left:5px;
+     }
+  .container {
+     
+      height:auto;
+    
+      margin:5px;
+    display:block;
+     
+    }
+   span, .sidebar, #currentword {
+       font-size:15px;
+   }
+   h2 {
+       font-size:20px;
+   }
+   }
