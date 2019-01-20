@@ -1,6 +1,6 @@
 
 
-var words = ["MAGGIE", "TOMMY", "JACKJACK", "STEWIE", "HONEYBOOBOO", "THEODORELINDSEYTEMPLETON"]
+var words = ["MAGGIESIMPSON", "TOMMYPICKLES", "JACKJACK", "STEWIEGRIFFIN", "HONEYBOOBOO", "THEODORELINDSEYTEMPLETON", "BABYSINCLAIRE"]
 
 
 var randomWord = "";
@@ -41,6 +41,7 @@ var coolWhip = document.getElementById("coolWhip");
 var jackjack = document.getElementById("jackjack");
 var honeybooboo = document.getElementById("honeybooboo");
 var bossbaby = document.getElementById("bossbaby");
+var babysinclair = document.getElementById("dinosaurs");
 
 
 function aud() {
@@ -52,6 +53,7 @@ function aud() {
         jackjack.pause();
         rugrats.pause();
         bossbaby.pause();
+         babysinclair.pause();
         maggie.play();
         document.getElementById("image").src = "./assets/images/maggieusuck.png";
     }
@@ -63,6 +65,7 @@ function aud() {
         jackjack.pause();
         maggie.pause();
         bossbaby.pause();
+         babysinclair.pause();
         rugrats.play();
         document.getElementById("image").src = "./assets/images/tommypickles.jpg";
     }
@@ -73,6 +76,7 @@ function aud() {
         rugrats.pause();
         maggie.pause();
         bossbaby.pause();
+         babysinclair.pause();
         jackjack.play();
         document.getElementById("image").src = "./assets/images/jackjacklaughing.gif";
     }
@@ -84,6 +88,7 @@ function aud() {
         rugrats.pause();
         maggie.pause();
         bossbaby.pause();
+         babysinclair.pause();
         coolWhip.play();
         document.getElementById("image").src = "./assets/images/stewie.jpg";
     }
@@ -94,6 +99,7 @@ function aud() {
         rugrats.pause();
         maggie.pause();
         coolWhip.pause();
+         babysinclair.pause();
         honeybooboo.play();
         document.getElementById("image").src = "./assets/images/honeybooboo.jpg";
     }
@@ -105,8 +111,20 @@ function aud() {
         maggie.pause();
         coolWhip.pause();
         jackjack.pause();
+         babysinclair.pause();
         bossbaby.play();
         document.getElementById("image").src = "./assets/images/cookies.gif";
+    } 
+     //Baby Sinclair
+    else if (randomWord === words[6]) {
+        honeybooboo.pause();
+        rugrats.pause();
+        maggie.pause();
+        coolWhip.pause();
+        jackjack.pause();
+        bossbaby.pause();
+        babysinclair.play();
+        document.getElementById("image").src = "./assets/images/babysinclair.gif";
     } 
 };
 
